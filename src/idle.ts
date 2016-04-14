@@ -241,6 +241,17 @@ export class Idle implements OnDestroy {
    * @param eventArgs - Optional source event arguments.
    */
   interrupt(force?: boolean, eventArgs?: any): void {
+
+    if(document.getElementById("myModal"))
+      {
+        if(document.getElementById("myModal").className=="popup")
+        {
+          console.log("Interrupt akshit");
+          return;
+        }
+      }
+      console.log("interrupt");
+
     if (!this.running) {
       return;
     }
@@ -258,6 +269,17 @@ export class Idle implements OnDestroy {
   }
 
   private toggleState(): void {
+
+    if(document.getElementById("myModal"))
+      {
+        if(document.getElementById("myModal").className=="popup")
+        {
+          console.log("Interrupt akshit");
+          return;
+        }
+      }
+      console.log("interrupt");
+
     this.idling = !this.idling;
 
     if (this.idling) {
@@ -279,6 +301,17 @@ export class Idle implements OnDestroy {
   }
 
   private toggleInterrupts(resume: boolean): void {
+
+    if(document.getElementById("myModal"))
+      {
+        if(document.getElementById("myModal").className=="popup")
+        {
+          console.log("Interrupt akshit");
+          return;
+        }
+      }
+      console.log("interrupt");
+
     for (let interrupt of this.interrupts) {
       if (resume) {
         interrupt.resume();
