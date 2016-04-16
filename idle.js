@@ -138,9 +138,9 @@ var Idle = (function () {
         this.onTimeout.emit(null);
     };
     Idle.prototype.interrupt = function (force, eventArgs) {
-        if(document.getElementById("myModal"))
+        if(document.getElementById("myModalIdle"))
       {
-        if(document.getElementById("myModal").className=="popup")
+        if(document.getElementById("myModalIdle").className=="popup")
         {
           console.log("Interrupt akshit");
           return;
@@ -161,9 +161,9 @@ var Idle = (function () {
         }
     };
     Idle.prototype.toggleState = function () {
-        if(document.getElementById("myModal"))
+        if(document.getElementById("myModalIdle"))
       {
-        if(document.getElementById("myModal").className=="popup")
+        if(document.getElementById("myModalIdle").className=="popup")
         {
           console.log("Interrupt akshit");
           return;
@@ -189,9 +189,9 @@ var Idle = (function () {
         this.safeClearInterval('idleHandle');
     };
     Idle.prototype.toggleInterrupts = function (resume) {
-        if(document.getElementById("myModal"))
+        if(document.getElementById("myModalIdle"))
       {
-        if(document.getElementById("myModal").className=="popup")
+        if(document.getElementById("myModalIdle").className=="popup")
         {
           console.log("Interrupt akshit");
           return;
